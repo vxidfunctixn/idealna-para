@@ -8,11 +8,13 @@
 
 html {
   font-size: 10px;
-  // font family
+  font-family: $baseFontFamily;
 }
 
 body {
   margin: 0;
-  font-size: 1.8em;
-  color: blue !important;
+  font-size: $mdFont;
+  color: $fontLight;
+  background: $bodyLight;
+
 }
