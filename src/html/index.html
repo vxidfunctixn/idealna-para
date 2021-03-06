@@ -11,8 +11,150 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
   <body>
+    <div class="nav-bar">
+      <div class="nav-logo-container">
+        <img src="../img/navlogo.png" alt="Idealna para - logo" class="nav-logo" />
+      </div>
+      <div class="nav-flex">
+        <nav class="navigation">
+          <form action="#" class="search-form" id="search-form">
+            <div class="search-container">
+              <input
+                type="search"
+                class="search-input"
+                id="search-input"
+                placeholder="Szukaj na stronie..."
+              />
+              <div class="search-focus-mark"></div>
+              <button
+                type="button"
+                class="search-button"
+                id="close-search-button"
+                onClick="closeSearch()"
+              >
+                <span class="material-icons"> close </span>
+              </button>
+              <button type="submit" class="search-button">
+                <span class="material-icons"> search </span>
+              </button>
+            </div>
+          </form>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Tematy</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">O nas</a>
+            </li>
+          </ul>
+          <div class="separator"></div>
+          <button class="nav-button" id="invert-colors">
+            <span class="label">Tryb ciemny</span>
+            <span class="material-icons"> invert_colors </span>
+          </button>
+          <button class="nav-button" id="show-search" onClick="showSearch()">
+            <span class="material-icons"> search </span>
+          </button>
+        </nav>
+        <button class="nav-button" id="mobile-toggle" onClick="toggleNav()">
+          <span class="animated-icon-menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <img src="../img/sample/1.png" style="width: 100%" />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, praesentium officiis
+      explicabo excepturi nihil veritatis dolores atque laborum quas obcaecati ipsum beatae nisi,
+      quia voluptatibus neque aspernatur saepe? Ex saepe neque dolorum, explicabo quo in, numquam
+      molestiae sunt dignissimos reiciendis cum, quam voluptate. At quidem odit quos maxime expedita
+      alias ipsa nihil exercitationem, quisquam quas ad doloremque illum obcaecati iusto dolore
+      ratione et quo esse nostrum atque sint quasi saepe odio. Porro, ipsam? Maiores consequatur
+      iusto veniam eius laborum possimus sed deleniti provident suscipit animi mollitia, quasi magni
+      repellat minus doloremque debitis, similique commodi quas perferendis, aut et quia delectus
+      optio incidunt? Id saepe facilis assumenda voluptatem illo, mollitia culpa soluta quidem in
+      dolorem accusantium eos numquam quibusdam corporis. Perspiciatis cum deserunt illum voluptas
+      quas iusto ex obcaecati et incidunt iste ratione dolorum ipsam dignissimos corporis officiis
+      molestias nemo, possimus magni, accusantium saepe. Voluptatum accusamus excepturi sed atque
+      dignissimos! Perspiciatis non veritatis blanditiis quidem magnam, provident fuga quae corrupti
+      facere velit excepturi, accusamus recusandae ab, illo saepe. Odio, in eos possimus recusandae
+      commodi quae incidunt, doloremque, facere nulla alias eligendi. Nesciunt cum nostrum quia enim
+      quasi. Incidunt voluptas cum veniam, assumenda sint eveniet, recusandae necessitatibus dolorum
+      ad, fuga pariatur suscipit! Aliquam, tempore? Recusandae, quaerat iusto non, accusantium,
+      laborum at itaque repellat voluptatibus qui fuga unde quos sit dolorem suscipit illum dolorum
+      excepturi maxime sed nostrum dicta cupiditate! Modi voluptatum sunt at! Pariatur, doloremque.
+      Quidem vero labore autem incidunt delectus eveniet dolore nihil itaque blanditiis aliquid quas
+      quis a quaerat praesentium optio id est ut, illum quisquam fugit magnam pariatur provident
+      consequatur quos! Aut voluptatibus consequatur magni. Minus harum consequuntur atque fuga.
+      Numquam, iste ipsum rerum possimus eaque quis repudiandae. Magnam similique consectetur error
+      deleniti sapiente dignissimos qui fugiat illum earum dolore? Reprehenderit atque veniam nihil
+      dolorem nobis dolores vero nisi!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, praesentium officiis
+      explicabo excepturi nihil veritatis dolores atque laborum quas obcaecati ipsum beatae nisi,
+      quia voluptatibus neque aspernatur saepe? Ex saepe neque dolorum, explicabo quo in, numquam
+      molestiae sunt dignissimos reiciendis cum, quam voluptate. At quidem odit quos maxime expedita
+      alias ipsa nihil exercitationem, quisquam quas ad doloremque illum obcaecati iusto dolore
+      ratione et quo esse nostrum atque sint quasi saepe odio. Porro, ipsam? Maiores consequatur
+      iusto veniam eius laborum possimus sed deleniti provident suscipit animi mollitia, quasi magni
+      repellat minus doloremque debitis, similique commodi quas perferendis, aut et quia delectus
+      optio incidunt? Id saepe facilis assumenda voluptatem illo, mollitia culpa soluta quidem in
+      dolorem accusantium eos numquam quibusdam corporis. Perspiciatis cum deserunt illum voluptas
+      quas iusto ex obcaecati et incidunt iste ratione dolorum ipsam dignissimos corporis officiis
+      molestias nemo, possimus magni, accusantium saepe. Voluptatum accusamus excepturi sed atque
+      dignissimos! Perspiciatis non veritatis blanditiis quidem magnam, provident fuga quae corrupti
+      facere velit excepturi, accusamus recusandae ab, illo saepe. Odio, in eos possimus recusandae
+      commodi quae incidunt, doloremque, facere nulla alias eligendi. Nesciunt cum nostrum quia enim
+      quasi. Incidunt voluptas cum veniam, assumenda sint eveniet, recusandae necessitatibus dolorum
+      ad, fuga pariatur suscipit! Aliquam, tempore? Recusandae, quaerat iusto non, accusantium,
+      laborum at itaque repellat voluptatibus qui fuga unde quos sit dolorem suscipit illum dolorum
+      excepturi maxime sed nostrum dicta cupiditate! Modi voluptatum sunt at! Pariatur, doloremque.
+      Quidem vero labore autem incidunt delectus eveniet dolore nihil itaque blanditiis aliquid quas
+      quis a quaerat praesentium optio id est ut, illum quisquam fugit magnam pariatur provident
+      consequatur quos! Aut voluptatibus consequatur magni. Minus harum consequuntur atque fuga.
+      Numquam, iste ipsum rerum possimus eaque quis repudiandae. Magnam similique consectetur error
+      deleniti sapiente dignissimos qui fugiat illum earum dolore? Reprehenderit atque veniam nihil
+      dolorem nobis dolores vero nisi!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, praesentium officiis
+      explicabo excepturi nihil veritatis dolores atque laborum quas obcaecati ipsum beatae nisi,
+      quia voluptatibus neque aspernatur saepe? Ex saepe neque dolorum, explicabo quo in, numquam
+      molestiae sunt dignissimos reiciendis cum, quam voluptate. At quidem odit quos maxime expedita
+      alias ipsa nihil exercitationem, quisquam quas ad doloremque illum obcaecati iusto dolore
+      ratione et quo esse nostrum atque sint quasi saepe odio. Porro, ipsam? Maiores consequatur
+      iusto veniam eius laborum possimus sed deleniti provident suscipit animi mollitia, quasi magni
+      repellat minus doloremque debitis, similique commodi quas perferendis, aut et quia delectus
+      optio incidunt? Id saepe facilis assumenda voluptatem illo, mollitia culpa soluta quidem in
+      dolorem accusantium eos numquam quibusdam corporis. Perspiciatis cum deserunt illum voluptas
+      quas iusto ex obcaecati et incidunt iste ratione dolorum ipsam dignissimos corporis officiis
+      molestias nemo, possimus magni, accusantium saepe. Voluptatum accusamus excepturi sed atque
+      dignissimos! Perspiciatis non veritatis blanditiis quidem magnam, provident fuga quae corrupti
+      facere velit excepturi, accusamus recusandae ab, illo saepe. Odio, in eos possimus recusandae
+      commodi quae incidunt, doloremque, facere nulla alias eligendi. Nesciunt cum nostrum quia enim
+      quasi. Incidunt voluptas cum veniam, assumenda sint eveniet, recusandae necessitatibus dolorum
+      ad, fuga pariatur suscipit! Aliquam, tempore? Recusandae, quaerat iusto non, accusantium,
+      laborum at itaque repellat voluptatibus qui fuga unde quos sit dolorem suscipit illum dolorum
+      excepturi maxime sed nostrum dicta cupiditate! Modi voluptatum sunt at! Pariatur, doloremque.
+      Quidem vero labore autem incidunt delectus eveniet dolore nihil itaque blanditiis aliquid quas
+      quis a quaerat praesentium optio id est ut, illum quisquam fugit magnam pariatur provident
+      consequatur quos! Aut voluptatibus consequatur magni. Minus harum consequuntur atque fuga.
+      Numquam, iste ipsum rerum possimus eaque quis repudiandae. Magnam similique consectetur error
+      deleniti sapiente dignissimos qui fugiat illum earum dolore? Reprehenderit atque veniam nihil
+      dolorem nobis dolores vero nisi!
+    </p>
+
     <script src="../js/main.js"></script>
   </body>
 </html>

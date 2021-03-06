@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'helpers';
+@import 'partials/navigation';
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -16,5 +18,25 @@ body {
   font-size: $mdFont;
   color: $fontLight;
   background: $bodyLight;
+  overflow-x: hidden;
 
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: $bodyShadowMask;
+    z-index: 5;
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0;
+    transition: opacity $smoothTransition;
+  }
+}
+
+.separator {
+  height: 1px;
+  background: $gray100Light;
 }

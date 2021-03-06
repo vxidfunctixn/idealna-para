@@ -1,10 +1,16 @@
-const vs = ['jeden', 'Dwa', 'Trzy']
+const bodyEl = document.getElementsByTagName('body')
+const searchFormEl = document.getElementById('search-form')
+const searchInputEl = document.getElementById('search-input')
 
-const show = (variables) => {
-  const vars = [...variables]
-  vars.map((element) => {
-    console.log(element)
-  })
+const toggleNav = () => {
+  bodyEl[0].classList.toggle('expand-nav')
 }
 
-show(vs)
+const showSearch = () => {
+  searchFormEl.classList.add('show')
+  searchInputEl.focus()
+}
+
+const closeSearch = () => {
+  searchFormEl.classList.remove('show')
+}

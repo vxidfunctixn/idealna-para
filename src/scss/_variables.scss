@@ -2,6 +2,7 @@
 $accentColor: hsl(342, 100%, 67%);
 $mkColor: hsl(360, 100%, 68%);
 $vmColor: hsl(194, 100%, 68%);
+$bodyShadowMask: hsla(0, 0%, 0%, 40%);
 
 // Light theme
 $fontLight: hsl(0, 0%, 37%);
@@ -13,6 +14,7 @@ $bgNavLight: hsla(0, 0%, 100%, 70%);
 $bgLight: hsl(0, 0%, 100%);
 $bgTransparentLight: hsla(0, 0%, 100%, 90%);
 $bodyLight: hsl(302, 12%, 98%);
+$bgHoverLight: hsl(0, 0%, 0%, 7%);
 
 // Dark theme
 $fontDark: hsl(0, 0%, 84%);
@@ -24,6 +26,7 @@ $bgNavDark: hsla(0, 0%, 20%, 70%);
 $bgDark: hsl(0, 0%, 20%);
 $bgTransparentDark: hsla(0, 0%, 20%, 90%);
 $bodyDark: hsl(302, 4%, 16%);
+$bgHoverDark: hsl(0, 0%, 100%, 15%);
 
 // Shadows
 $areaShadowLight: 0px 10px 30px -10px hsla(0, 0%, 0%, 15%);
@@ -51,5 +54,22 @@ $xxlFont: 4.8rem;
 $regularFont: 400;
 $boldFont: 700;
 
+// Icon sizes
+$xsIcon: 16px;
+$mdIcon: 24px;
+$lgIcon: 32px;
+
 // Font family
 $baseFontFamily: 'Montserrat', sans-serif;
+
+// transitions
+$quickTransition: .2s ease-out;
+$smoothTransition: .4s ease-out;
+
+// Responsive breakpoints
+$__breakpoint_xs: 0px;       // 0px - 479px
+$__breakpoint_sm: 480px;     // 480px - 767px
+$__breakpoint_md: 768px;     // 768px - 1023px
+$__breakpoint_lg: 1024px;    // 1024pz - 1199px
+$__breakpoint_xl: 1200px;    // 1200px - 1499px
+$__breakpoint_xxl: 1500px;   // 1500px ^
