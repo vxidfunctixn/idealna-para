@@ -1,0 +1,73 @@
+.sidebar {
+  margin-top: $lgSpace;
+  flex-shrink: 0;
+  padding: $xsSpace 0;
+
+  @include screen('lg', 'xxl') {
+    margin-top: 0;
+    margin-left: $lgSpace;
+    width: 300px;
+  }
+
+  h1 {
+    font-size: $smFont;
+    margin: 0;
+    padding: $smSpace $mdSpace;
+    text-transform: uppercase;
+  }
+}
+
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: $xsSpace 0;
+
+  .sidebar-item {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    .sidebar-link {
+      display: flex;
+      padding: $xsSpace $mdSpace;
+      outline: none;
+      position: relative;
+      z-index: 1;
+      color: inherit;
+      font-size: $xsFont;
+      text-decoration: none;
+      align-items: center;
+
+      &:focus {
+        box-shadow: inset 0 0 0 1px $accentColor;
+      }
+
+      &::before {
+        content: '';
+        @include fillAbsolute();
+        z-index: -1;
+        will-change: transform;
+        opacity: 0;
+        transition: opacity $quickTransition;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.users-list {
+  .user-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .user-name {
+    padding-left: $xsSpace;
+  }
+}

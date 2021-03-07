@@ -2,6 +2,7 @@ body[theme=light] {
   color: $fontLight;
   background: $bodyLight;
 
+  .badge,
   .separator {
     background: $gray100Light;
   }
@@ -24,17 +25,13 @@ body[theme=light] {
     .search-input::placeholder {
       color: $placeholderLight;
     }
-
-    .search-button::before {
-      background: $bgHoverLight;
-    }
   }
 
-  .nav-list .nav-link::before {
-    background: $bgHoverLight;
-  }
-
-  .nav-button::before {
+  .search-container .search-button::before,
+  .nav-list .nav-link::before,
+  .nav-button::before,
+  .social-nav .social-link::before,
+  .sidebar-nav .sidebar-link::before {
     background: $bgHoverLight;
   }
 
@@ -60,6 +57,7 @@ body[theme=dark] {
   color: $fontDark;
   background: $bodyDark;
 
+  .badge,
   .separator {
     background: $gray100Dark;
   }
@@ -82,17 +80,13 @@ body[theme=dark] {
     .search-input::placeholder {
       color: $placeholderDark;
     }
-
-    .search-button::before {
-      background: $bgHoverDark;
-    }
   }
 
-  .nav-list .nav-link::before {
-    background: $bgHoverDark;
-  }
-
-  .nav-button::before {
+  .search-container .search-button::before,
+  .nav-list .nav-link::before,
+  .nav-button::before,
+  .social-nav .social-link::before,
+  .sidebar-nav .sidebar-link::before {
     background: $bgHoverDark;
   }
 
