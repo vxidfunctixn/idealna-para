@@ -1,0 +1,77 @@
+.pagination {
+  margin: 0;
+  padding: 0;
+  margin-bottom: $lgSpace;
+  display: flex;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  .pagination-link {
+    flex-basis: 54px;
+    display: block;
+    flex-shrink: 0;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    min-height: 54px;
+
+    &:focus {
+      box-shadow: inset 0 0 0 1px $accentColor;
+    }
+
+    &::before {
+      content: '';
+      @include fillAbsolute();
+      z-index: -1;
+      will-change: transform;
+      opacity: 0;
+      transition: opacity $quickTransition;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .pagination-item {
+    flex-grow: 1;
+    display: block;
+    flex-basis: 54px;
+
+    &:first-child {
+      .pagination-link {
+        border-top-left-radius: $lgRadius;
+        border-bottom-left-radius: $lgRadius;
+
+        &::before {
+          border-top-left-radius: $lgRadius;
+          border-bottom-left-radius: $lgRadius;
+        }
+      }
+    }
+
+    &:last-child {
+      .pagination-link {
+        border-top-right-radius: $lgRadius;
+        border-bottom-right-radius: $lgRadius;
+
+        &::before {
+          border-top-right-radius: $lgRadius;
+          border-bottom-right-radius: $lgRadius;
+        }
+      }
+    }
+  }
+
+  .pagination-link.active {
+    background: $accentColor;
+    color: white;
+  }
+}

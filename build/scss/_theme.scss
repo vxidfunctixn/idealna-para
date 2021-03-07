@@ -1,0 +1,133 @@
+body[theme=light] {
+  color: $fontLight;
+  background: $bodyLight;
+
+  .badge,
+  .separator {
+    background: $gray100Light;
+  }
+
+  .article-item .article-item-thumbnail {
+    background: $gray200Light;
+  }
+
+  .nav-bar {
+    background: $bgNavLight;
+    box-shadow: $navShadowLight;
+  }
+
+  .navigation {
+    @include screen('xs', 'md') {
+      background: $bodyLight;
+    }
+  }
+
+  .search-container {
+    background: $bgLight;
+    box-shadow: $areaShadowLight;
+
+    .search-input::placeholder {
+      color: $placeholderLight;
+    }
+  }
+
+  .search-container .search-button::before,
+  .nav-list .nav-link::before,
+  .nav-button::before,
+  .social-nav .social-link::before,
+  .sidebar-nav .sidebar-link::before,
+  .article-item .article-item-more::before,
+  .pagination .pagination-arrow::before,
+  .pagination .pagination-link::before {
+    background: $bgHoverLight;
+  }
+
+  .animated-icon-menu .line {
+    background: $fontLight;
+  }
+
+  .page-header .container h1,
+  .article-item .article-item-time {
+    background: $bgTransparentLight;
+  }
+
+  .panel {
+    background: $bgLight;
+    box-shadow: $areaShadowLight;
+  }
+
+  .main-footer {
+    background: $bgLight;
+  }
+
+  .article-item-author {
+    color: white;
+  }
+}
+
+body[theme=dark] {
+  color: $fontDark;
+  background: $bodyDark;
+
+  .badge,
+  .separator {
+    background: $gray100Dark;
+  }
+
+  .article-item .article-item-thumbnail {
+    background: $gray200Dark;
+  }
+
+  .nav-bar {
+    background: $bgNavDark;
+    box-shadow: $navShadowDark;
+  }
+
+  .navigation {
+    @include screen('xs', 'md') {
+      background: $bodyDark;
+    }
+  }
+
+  .search-container {
+    background: $bgDark;
+    box-shadow: $areaShadowDark;
+
+    .search-input::placeholder {
+      color: $placeholderDark;
+    }
+  }
+
+  .search-container .search-button::before,
+  .nav-list .nav-link::before,
+  .nav-button::before,
+  .social-nav .social-link::before,
+  .sidebar-nav .sidebar-link::before,
+  .article-item .article-item-more::before,
+  .pagination .pagination-arrow::before,
+  .pagination .pagination-link::before {
+    background: $bgHoverDark;
+  }
+
+  .animated-icon-menu .line {
+    background: $fontDark;
+  }
+
+  .page-header .container h1,
+  .article-item .article-item-time {
+    background: $bgTransparentDark;
+  }
+
+  .panel {
+    background: $bgDark;
+    box-shadow: $areaShadowDark;
+  }
+
+  .main-footer {
+    background: $bgDark;
+  }
+
+  .article-item-author {
+    color: black;
+  }
+}
