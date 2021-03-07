@@ -36,7 +36,9 @@ body[theme=light] {
   .nav-button::before,
   .social-nav .social-link::before,
   .sidebar-nav .sidebar-link::before,
-  .article-item .article-item-more::before {
+  .article-item .article-item-more::before,
+  .pagination .pagination-arrow::before,
+  .pagination .pagination-link::before {
     background: $bgHoverLight;
   }
 
@@ -101,7 +103,9 @@ body[theme=dark] {
   .nav-button::before,
   .social-nav .social-link::before,
   .sidebar-nav .sidebar-link::before,
-  .article-item .article-item-more::before {
+  .article-item .article-item-more::before,
+  .pagination .pagination-arrow::before,
+  .pagination .pagination-link::before {
     background: $bgHoverDark;
   }
 

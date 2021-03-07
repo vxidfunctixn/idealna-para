@@ -40,7 +40,9 @@ body[theme=light] .nav-list .nav-link::before,
 body[theme=light] .nav-button::before,
 body[theme=light] .social-nav .social-link::before,
 body[theme=light] .sidebar-nav .sidebar-link::before,
-body[theme=light] .article-item .article-item-more::before {
+body[theme=light] .article-item .article-item-more::before,
+body[theme=light] .pagination .pagination-arrow::before,
+body[theme=light] .pagination .pagination-link::before {
   background: rgba(0, 0, 0, 0.07);
 }
 body[theme=light] .animated-icon-menu .line {
@@ -103,7 +105,9 @@ body[theme=dark] .nav-list .nav-link::before,
 body[theme=dark] .nav-button::before,
 body[theme=dark] .social-nav .social-link::before,
 body[theme=dark] .sidebar-nav .sidebar-link::before,
-body[theme=dark] .article-item .article-item-more::before {
+body[theme=dark] .article-item .article-item-more::before,
+body[theme=dark] .pagination .pagination-arrow::before,
+body[theme=dark] .pagination .pagination-link::before {
   background: rgba(255, 255, 255, 0.07);
 }
 body[theme=dark] .animated-icon-menu .line {
@@ -846,6 +850,74 @@ body[theme=dark] .article-item-author {
 }
 .users-list .user-name {
   padding-left: 12px;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.pagination .pagination-link {
+  flex-basis: 54px;
+  display: block;
+  flex-shrink: 0;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  min-height: 54px;
+}
+.pagination .pagination-link:focus {
+  box-shadow: inset 0 0 0 1px #ff5789;
+}
+.pagination .pagination-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  will-change: transform;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.pagination .pagination-link:hover::before {
+  opacity: 1;
+}
+.pagination .pagination-item {
+  flex-grow: 1;
+  display: block;
+  flex-basis: 54px;
+}
+.pagination .pagination-item:first-child .pagination-link {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.pagination .pagination-item:first-child .pagination-link::before {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.pagination .pagination-item:last-child .pagination-link {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.pagination .pagination-item:last-child .pagination-link::before {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.pagination .pagination-link.active {
+  background: #ff5789;
+  color: white;
 }
 
 *, *::after, *::before {
