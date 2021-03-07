@@ -7,6 +7,10 @@ body[theme=light] {
     background: $gray100Light;
   }
 
+  .article-item .article-item-thumbnail {
+    background: $gray200Light;
+  }
+
   .nav-bar {
     background: $bgNavLight;
     box-shadow: $navShadowLight;
@@ -31,7 +35,8 @@ body[theme=light] {
   .nav-list .nav-link::before,
   .nav-button::before,
   .social-nav .social-link::before,
-  .sidebar-nav .sidebar-link::before {
+  .sidebar-nav .sidebar-link::before,
+  .article-item .article-item-more::before {
     background: $bgHoverLight;
   }
 
@@ -39,7 +44,8 @@ body[theme=light] {
     background: $fontLight;
   }
 
-  .page-header .container h1 {
+  .page-header .container h1,
+  .article-item .article-item-time {
     background: $bgTransparentLight;
   }
 
@@ -51,6 +57,10 @@ body[theme=light] {
   .main-footer {
     background: $bgLight;
   }
+
+  .article-item-author {
+    color: white;
+  }
 }
 
 body[theme=dark] {
@@ -60,6 +70,10 @@ body[theme=dark] {
   .badge,
   .separator {
     background: $gray100Dark;
+  }
+
+  .article-item .article-item-thumbnail {
+    background: $gray200Dark;
   }
 
   .nav-bar {
@@ -86,7 +100,8 @@ body[theme=dark] {
   .nav-list .nav-link::before,
   .nav-button::before,
   .social-nav .social-link::before,
-  .sidebar-nav .sidebar-link::before {
+  .sidebar-nav .sidebar-link::before,
+  .article-item .article-item-more::before {
     background: $bgHoverDark;
   }
 
@@ -94,7 +109,8 @@ body[theme=dark] {
     background: $fontDark;
   }
 
-  .page-header .container h1 {
+  .page-header .container h1,
+  .article-item .article-item-time {
     background: $bgTransparentDark;
   }
 
@@ -105,5 +121,9 @@ body[theme=dark] {
 
   .main-footer {
     background: $bgDark;
+  }
+
+  .article-item-author {
+    color: black;
   }
 }
