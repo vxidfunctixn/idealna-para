@@ -13,13 +13,15 @@
     />
     <link rel="stylesheet" href="../icofont/icofont.min.css" />
   </head>
+
   <body theme="dark">
     <div class="nav-bar">
       <div class="nav-logo-container">
         <img src="../img/navlogo.png" alt="Idealna para - logo" class="nav-logo" />
       </div>
+
       <div class="nav-flex">
-        <nav class="navigation">
+        <div class="navigation">
           <form action="#" class="search-form" id="search-form">
             <div class="search-container">
               <input
@@ -35,17 +37,21 @@
               </button>
             </div>
           </form>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Tematy</a>
-            </li>
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">O nas</a>
-            </li>
-          </ul>
+
+          <nav>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Tematy</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">O nas</a>
+              </li>
+            </ul>
+          </nav>
+
           <div class="separator"></div>
           <button class="nav-button" id="invert-colors" onClick="invertColors()">
             <span class="label" id="invert-colors-label">Tryb jasny</span>
@@ -54,7 +60,8 @@
           <button class="nav-button" id="show-search" onClick="showSearch()">
             <i class="icofont-search lg-icon"></i>
           </button>
-        </nav>
+        </div>
+
         <button class="nav-button" id="mobile-toggle" onClick="toggleNav()">
           <span class="animated-icon-menu">
             <span class="line"></span>
@@ -66,91 +73,107 @@
     </div>
 
     <header class="page-header">
-      <img src="../img/sample/1.png" alt="" class="header-image" />
       <div class="container">
         <h1>Wyszukiwana fraza: "Jakaś tam fraza do wyszukania"</h1>
       </div>
+      <img src="../img/sample/1.png" alt="" class="header-image" />
     </header>
 
     <div class="container main-wrapper">
       <div class="main-content">asdada</div>
-      <div class="sidebar panel">
-        <h1>Social media</h1>
-        <div class="separator"></div>
-        <ul class="social-nav">
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <i class="icofont-facebook lg-icon"></i>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <i class="icofont-instagram lg-icon"></i>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <i class="icofont-twitter lg-icon"></i>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <i class="icofont-youtube-play lg-icon"></i>
-            </a>
-          </li>
-        </ul>
-        <h1>Autorzy</h1>
-        <div class="separator"></div>
-        <ul class="sidebar-nav users-list">
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">
-              <img src="../img/avatars/vm.png" alt="Weronika Markiewicz" class="user-avatar" />
-              <div class="user-name">Weronika Markiewicz</div>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">
-              <img src="../img/avatars/mk.png" alt="Marcin Kalinowski" class="user-avatar" />
-              <div class="user-name">Marcin Kalinowski</div>
-            </a>
-          </li>
-        </ul>
-        <h1>Ostatnie wpisy</h1>
-        <div class="separator"></div>
-        <ul class="sidebar-nav">
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
-          </li>
-        </ul>
-        <h1>Tematy</h1>
-        <div class="separator"></div>
-        <ul class="sidebar-nav">
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
-          </li>
-        </ul>
-      </div>
+      <aside class="sidebar panel">
+        <section>
+          <header>
+            <h1>Social media</h1>
+            <div class="separator"></div>
+          </header>
+          <ul class="social-nav">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <i class="icofont-facebook lg-icon"></i>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <i class="icofont-instagram lg-icon"></i>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <i class="icofont-twitter lg-icon"></i>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <i class="icofont-youtube-play lg-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <header>
+            <h1>Autorzy</h1>
+            <div class="separator"></div>
+          </header>
+          <ul class="sidebar-nav users-list">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img src="../img/avatars/vm.png" alt="Weronika Markiewicz" class="user-avatar" />
+                <div class="user-name">Weronika Markiewicz</div>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <img src="../img/avatars/mk.png" alt="Marcin Kalinowski" class="user-avatar" />
+                <div class="user-name">Marcin Kalinowski</div>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <header>
+            <h1>Ostatnie wpisy</h1>
+            <div class="separator"></div>
+          </header>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Przykładowy tytuł wpisu</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <header>
+            <h1>Tematy</h1>
+            <div class="separator"></div>
+          </header>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">Temat&nbsp;<span class="badge">12</span></a>
+            </li>
+          </ul>
+        </section>
+      </aside>
     </div>
 
     <footer class="main-footer">
