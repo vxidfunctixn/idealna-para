@@ -43,6 +43,16 @@ body[theme=light] .nav-button::before {
 body[theme=light] .animated-icon-menu .line {
   background: #5e5e5e;
 }
+body[theme=light] .page-header .container h1 {
+  background: rgba(255, 255, 255, 0.9);
+}
+body[theme=light] .panel {
+  background: white;
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.15);
+}
+body[theme=light] .main-footer {
+  background: white;
+}
 
 body[theme=dark] {
   color: #d6d6d6;
@@ -88,6 +98,16 @@ body[theme=dark] .nav-button::before {
 }
 body[theme=dark] .animated-icon-menu .line {
   background: #d6d6d6;
+}
+body[theme=dark] .page-header .container h1 {
+  background: rgba(51, 51, 51, 0.9);
+}
+body[theme=dark] .panel {
+  background: #333333;
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+body[theme=dark] .main-footer {
+  background: #333333;
 }
 
 @media (max-width: 479px) {
@@ -181,6 +201,7 @@ body[theme=dark] .animated-icon-menu .line {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   .navigation {
@@ -234,6 +255,7 @@ body[theme=dark] .animated-icon-menu .line {
   display: flex;
   align-items: center;
   padding: 0 24px;
+  flex-shrink: 0;
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   .search-form {
@@ -344,9 +366,6 @@ body[theme=dark] .animated-icon-menu .line {
 }
 .search-form .search-container .search-button:focus {
   box-shadow: inset 0 0 0 1px #ff5789;
-}
-.search-form .search-container .search-button .material-icons {
-  font-size: 24px;
 }
 .search-form .search-container .search-button::before {
   content: "";
@@ -513,9 +532,6 @@ body[theme=dark] .animated-icon-menu .line {
 .nav-button:hover::before {
   opacity: 1;
 }
-.nav-button .material-icons {
-  font-size: 32px;
-}
 
 .animated-icon-menu {
   display: inline-block;
@@ -592,6 +608,139 @@ body::before {
 
 .separator {
   height: 1px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1148px;
+  width: 100%;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header {
+  height: 400px;
+  position: relative;
+  margin-bottom: -100px;
+}
+.page-header .header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page-header .container {
+  position: relative;
+  padding-top: 104px;
+  padding-bottom: 124px;
+  z-index: 1;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-header .container h1 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.sm-icon {
+  font-size: 16px;
+}
+
+.md-icon {
+  font-size: 24px;
+}
+
+.lg-icon {
+  font-size: 32px;
+}
+
+.main-wrapper {
+  min-height: calc(100vh - 300px - 40px - 147px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .main-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+  .main-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1500px) {
+  .main-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.panel {
+  border-radius: 20px;
+}
+
+.main-content {
+  flex-shrink: 0;
+  width: 100%;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .main-content {
+    flex-shrink: 1;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+  .main-content {
+    flex-shrink: 1;
+  }
+}
+@media (min-width: 1500px) {
+  .main-content {
+    flex-shrink: 1;
+  }
+}
+
+.sidebar {
+  margin-top: 40px;
+  flex-shrink: 0;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .sidebar {
+    margin-top: 0;
+    margin-left: 40px;
+    width: 300px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+  .sidebar {
+    margin-top: 0;
+    margin-left: 40px;
+    width: 300px;
+  }
+}
+@media (min-width: 1500px) {
+  .sidebar {
+    margin-top: 0;
+    margin-left: 40px;
+    width: 300px;
+  }
+}
+
+.main-footer {
+  padding: 60px 0;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

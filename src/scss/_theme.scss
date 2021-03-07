@@ -41,6 +41,19 @@ body[theme=light] {
   .animated-icon-menu .line {
     background: $fontLight;
   }
+
+  .page-header .container h1 {
+    background: $bgTransparentLight;
+  }
+
+  .panel {
+    background: $bgLight;
+    box-shadow: $areaShadowLight;
+  }
+
+  .main-footer {
+    background: $bgLight;
+  }
 }
 
 body[theme=dark] {
@@ -85,5 +98,18 @@ body[theme=dark] {
 
   .animated-icon-menu .line {
     background: $fontDark;
+  }
+
+  .page-header .container h1 {
+    background: $bgTransparentDark;
+  }
+
+  .panel {
+    background: $bgDark;
+    box-shadow: $areaShadowDark;
+  }
+
+  .main-footer {
+    background: $bgDark;
   }
 }

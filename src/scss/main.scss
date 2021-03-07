@@ -38,3 +38,97 @@ body {
 .separator {
   height: 1px;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1148px;
+  width: 100%;
+  padding: 0 $mdSpace;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header {
+  height: 400px;
+  position: relative;
+  margin-bottom: -100px;
+
+  .header-image {
+    @include fillAbsolute();
+    object-fit: cover;
+  }
+
+  .container {
+    position: relative;
+    padding-top: 104px;
+    padding-bottom: 124px;
+    z-index: 1;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-weight: $regularFont;
+      font-size: $lgFont;
+      padding: $xsSpace $mdSpace;
+      border-radius: $lgRadius;
+      text-align: center;
+    }
+  }
+}
+
+.sm-icon {
+  font-size: $smIcon;
+}
+
+.md-icon {
+  font-size: $mdIcon;
+}
+
+.lg-icon {
+  font-size: $lgIcon;
+}
+
+.main-wrapper {
+  min-height: calc(100vh - 300px - 40px - 147px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $lgSpace;
+
+
+  @include screen('lg', 'xxl') {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.panel {
+  border-radius: $lgRadius;
+}
+
+.main-content {
+  flex-shrink: 0;
+  width: 100%;
+
+  @include screen('lg', 'xxl') {
+    flex-shrink: 1;
+  }
+}
+
+.sidebar {
+  margin-top: $lgSpace;
+  flex-shrink: 0;
+
+  @include screen('lg', 'xxl') {
+    margin-top: 0;
+    margin-left: $lgSpace;
+    width: 300px;
+  }
+}
+
+.main-footer {
+  padding: $xlSpace 0;
+  font-size: $smFont;
+  text-align: center;
+}

@@ -81,6 +81,12 @@ module.exports = function (grunt) {
             src: '**/*',
             dest: 'build/scss/',
           },
+          {
+            expand: true,
+            cwd: 'src/icofont/',
+            src: '**/*',
+            dest: 'build/icofont/',
+          },
         ],
       },
     },
