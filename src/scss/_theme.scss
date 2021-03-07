@@ -1,0 +1,89 @@
+body[theme=light] {
+  color: $fontLight;
+  background: $bodyLight;
+
+  .separator {
+    background: $gray100Light;
+  }
+
+  .nav-bar {
+    background: $bgNavLight;
+    box-shadow: $navShadowLight;
+  }
+
+  .navigation {
+    @include screen('xs', 'md') {
+      background: $bodyLight;
+    }
+  }
+
+  .search-container {
+    background: $bgLight;
+    box-shadow: $areaShadowLight;
+
+    .search-input::placeholder {
+      color: $placeholderLight;
+    }
+
+    .search-button::before {
+      background: $bgHoverLight;
+    }
+  }
+
+  .nav-list .nav-link::before {
+    background: $bgHoverLight;
+  }
+
+  .nav-button::before {
+    background: $bgHoverLight;
+  }
+
+  .animated-icon-menu .line {
+    background: $fontLight;
+  }
+}
+
+body[theme=dark] {
+  color: $fontDark;
+  background: $bodyDark;
+
+  .separator {
+    background: $gray100Dark;
+  }
+
+  .nav-bar {
+    background: $bgNavDark;
+    box-shadow: $navShadowDark;
+  }
+
+  .navigation {
+    @include screen('xs', 'md') {
+      background: $bodyDark;
+    }
+  }
+
+  .search-container {
+    background: $bgDark;
+    box-shadow: $areaShadowDark;
+
+    .search-input::placeholder {
+      color: $placeholderDark;
+    }
+
+    .search-button::before {
+      background: $bgHoverDark;
+    }
+  }
+
+  .nav-list .nav-link::before {
+    background: $bgHoverDark;
+  }
+
+  .nav-button::before {
+    background: $bgHoverDark;
+  }
+
+  .animated-icon-menu .line {
+    background: $fontDark;
+  }
+}

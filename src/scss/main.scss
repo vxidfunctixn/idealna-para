@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'helpers';
+@import 'theme';
 @import 'partials/navigation';
 
 *, *::after, *::before {
@@ -16,8 +17,6 @@ html {
 body {
   margin: 0;
   font-size: $mdFont;
-  color: $fontLight;
-  background: $bodyLight;
   overflow-x: hidden;
 
   &::before {
@@ -38,5 +37,4 @@ body {
 
 .separator {
   height: 1px;
-  background: $gray100Light;
 }

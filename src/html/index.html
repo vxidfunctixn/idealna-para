@@ -13,7 +13,7 @@
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
-  <body>
+  <body theme="dark">
     <div class="nav-bar">
       <div class="nav-logo-container">
         <img src="../img/navlogo.png" alt="Idealna para - logo" class="nav-logo" />
@@ -29,15 +29,7 @@
                 placeholder="Szukaj na stronie..."
               />
               <div class="search-focus-mark"></div>
-              <button
-                type="button"
-                class="search-button"
-                id="close-search-button"
-                onClick="closeSearch()"
-              >
-                <span class="material-icons"> close </span>
-              </button>
-              <button type="submit" class="search-button">
+              <button type="submit" class="search-button" id="search-submit">
                 <span class="material-icons"> search </span>
               </button>
             </div>
@@ -54,8 +46,8 @@
             </li>
           </ul>
           <div class="separator"></div>
-          <button class="nav-button" id="invert-colors">
-            <span class="label">Tryb ciemny</span>
+          <button class="nav-button" id="invert-colors" onClick="invertColors()">
+            <span class="label" id="invert-colors-label">Tryb ciemny</span>
             <span class="material-icons"> invert_colors </span>
           </button>
           <button class="nav-button" id="show-search" onClick="showSearch()">
