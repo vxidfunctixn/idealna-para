@@ -1,19 +1,27 @@
 body[theme=light] {
   color: #5e5e5e;
   background: #f4f1f4;
+  scrollbar-color: light;
+}
+body[theme=light]::-webkit-scrollbar-track {
+  background: white;
+}
+body[theme=light]::-webkit-scrollbar-thumb {
+  background: #ff5789;
+  border: 2px solid white;
 }
 body[theme=light] .badge,
 body[theme=light] .separator {
   background: #f2f2f2;
 }
 body[theme=light] .navigation .separator {
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0, 0, 0, 0.06);
 }
 body[theme=light] .article-item .article-item-thumbnail {
   background: #ebebeb;
 }
 body[theme=light] .nav-bar {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.15);
 }
 @media (max-width: 479px) {
@@ -36,10 +44,11 @@ body[theme=light] .search-container {
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.15);
 }
 body[theme=light] .search-container .search-input::placeholder {
-  color: #d1d1d1;
+  color: #c4c4c4;
 }
 body[theme=light] .pagination .pagination-link.disable {
-  color: #d1d1d1;
+  color: #c4c4c4;
+  opacity: 0.7;
 }
 body[theme=light] .search-container .search-button::before,
 body[theme=light] .nav-list .nav-link::before,
@@ -49,7 +58,7 @@ body[theme=light] .sidebar-nav .sidebar-link::before,
 body[theme=light] .article-item .article-item-more::before,
 body[theme=light] .pagination .pagination-arrow::before,
 body[theme=light] .pagination .pagination-link::before {
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0, 0, 0, 0.06);
 }
 body[theme=light] .animated-icon-menu .line {
   background: #5e5e5e;
@@ -73,6 +82,14 @@ body[theme=light] .pagination .pagination-link.active {
 body[theme=dark] {
   color: #d6d6d6;
   background: #2a272a;
+  scrollbar-color: dark;
+}
+body[theme=dark]::-webkit-scrollbar-track {
+  background: #333333;
+}
+body[theme=dark]::-webkit-scrollbar-thumb {
+  background: #333333;
+  border: 2px solid #ff5789;
 }
 body[theme=dark] .badge,
 body[theme=dark] .separator {
@@ -85,7 +102,7 @@ body[theme=dark] .article-item .article-item-thumbnail {
   background: #2e2e2e;
 }
 body[theme=dark] .nav-bar {
-  background: rgba(51, 51, 51, 0.7);
+  background: rgba(51, 51, 51, 0.8);
   box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 479px) {
@@ -922,6 +939,10 @@ body[theme=dark] .pagination .pagination-link.active {
 .sidebar-nav .sidebar-item .sidebar-link:hover::before {
   opacity: 1;
 }
+.sidebar-nav .badge {
+  position: relative;
+  z-index: -2;
+}
 
 .users-list .user-avatar {
   width: 64px;
@@ -1017,6 +1038,12 @@ body::before {
   will-change: transform;
   opacity: 0;
   transition: opacity 0.4s ease-out;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
 }
 
 .badge {

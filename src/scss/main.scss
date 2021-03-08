@@ -41,6 +41,14 @@ body {
     opacity: 0;
     transition: opacity $smoothTransition;
   }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+  }
 }
 
 .badge {

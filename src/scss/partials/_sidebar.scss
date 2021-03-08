@@ -55,6 +55,11 @@
       }
     }
   }
+
+  .badge {
+    position: relative;
+    z-index: -2;
+  }
 }
 
 .users-list {

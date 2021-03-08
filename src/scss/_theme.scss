@@ -1,6 +1,16 @@
 body[theme=light] {
   color: $fontLight;
   background: $bodyLight;
+  scrollbar-color: light;
+
+  &::-webkit-scrollbar-track {
+    background: $bgLight;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $accentColor;
+    border: 2px solid $bgLight;
+  }
 
   .badge,
   .separator {
@@ -37,6 +47,7 @@ body[theme=light] {
 
   .pagination .pagination-link.disable {
     color: $placeholderLight;
+    opacity: 0.7;
   }
 
   .search-container .search-button::before,
@@ -77,6 +88,16 @@ body[theme=light] {
 body[theme=dark] {
   color: $fontDark;
   background: $bodyDark;
+  scrollbar-color: dark;
+
+  &::-webkit-scrollbar-track {
+    background: $bgDark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $bgDark;
+    border: 2px solid $accentColor;
+  }
 
   .badge,
   .separator {
