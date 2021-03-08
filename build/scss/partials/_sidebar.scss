@@ -1,11 +1,9 @@
 .sidebar {
-  margin-top: $lgSpace;
   margin-bottom: $lgSpace;
   flex-shrink: 0;
   padding: $xsSpace 0;
 
   @include screen('lg', 'xxl') {
-    margin-top: 0;
     margin-left: $lgSpace;
     width: 300px;
   }

@@ -31,6 +31,10 @@ body[theme=light] {
     }
   }
 
+  .pagination .pagination-link.disable {
+    color: $placeholderLight;
+  }
+
   .search-container .search-button::before,
   .nav-list .nav-link::before,
   .nav-button::before,
@@ -60,7 +64,8 @@ body[theme=light] {
     background: $bgLight;
   }
 
-  .article-item-author {
+  .article-item-author,
+  .pagination .pagination-link.active {
     color: white;
   }
 }
@@ -98,6 +103,10 @@ body[theme=dark] {
     }
   }
 
+  .pagination .pagination-link.disable {
+    color: $placeholderDark;
+  }
+
   .search-container .search-button::before,
   .nav-list .nav-link::before,
   .nav-button::before,
@@ -127,7 +136,8 @@ body[theme=dark] {
     background: $bgDark;
   }
 
-  .article-item-author {
+  .article-item-author,
+  .pagination .pagination-link.active {
     color: black;
   }
 }

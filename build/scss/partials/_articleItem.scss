@@ -78,30 +78,58 @@
   }
 
   .article-item-footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-areas:
+                      "tags tags"
+                      "sepa sepa"
+                      "auth more";
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    justify-items: center;
+
+    @include screen("lg", "xxl") {
+      grid-template-areas:
+                      "sepa sepa sepa"
+                      "auth tags more";
+      grid-template-columns: 68px 1fr auto;
+    }
+
+    .separator {
+      grid-area: sepa;
+      width: 100%;
+    }
 
     .article-item-details {
-      padding: $xsSpace $mdSpace;
+      width: 100%;
+      padding: 0 $mdSpace 11px $mdSpace;
+      margin-top: -4px;
+      grid-area: tags;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+
+      @include screen("lg", "xxl") {
+        padding: 11px 0;
+        margin-top: 0;
+      }
     }
 
     .article-item-author {
+      grid-area: auth;
       display: block;
       font-size: 14px;
       font-weight: $boldFont;
       line-height: 32px;
       width: 32px;
       height: 32px;
-      flex-shrink: 0;
       border-radius: 50%;
       text-align: center;
       text-decoration: none;
-      margin-right: $xsSpace;
       outline: none;
+
+      @include screen("lg", "xxl") {
+        margin-left: 6px;
+      }
 
       &:focus {
         box-shadow: inset 0 0 0 1px $accentColor;
@@ -123,9 +151,12 @@
     .link {
       flex-shrink: 0;
       margin: 4px $xsSpace 4px 0px;
+      height: 24px;
     }
 
     .article-item-more {
+      width: 100%;
+      grid-area: more;
       color: inherit;
       text-decoration: none;
       font-size: $xsFont;
@@ -133,6 +164,7 @@
       padding: $smSpace $mdSpace;
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       outline: none;
       border-bottom-right-radius: $lgRadius;
       position: relative;

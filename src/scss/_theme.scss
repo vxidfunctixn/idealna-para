@@ -7,6 +7,10 @@ body[theme=light] {
     background: $gray100Light;
   }
 
+  .navigation .separator {
+    background: $bgHoverLight;
+  }
+
   .article-item .article-item-thumbnail {
     background: $gray200Light;
   }
@@ -29,6 +33,10 @@ body[theme=light] {
     .search-input::placeholder {
       color: $placeholderLight;
     }
+  }
+
+  .pagination .pagination-link.disable {
+    color: $placeholderLight;
   }
 
   .search-container .search-button::before,
@@ -60,7 +68,8 @@ body[theme=light] {
     background: $bgLight;
   }
 
-  .article-item-author {
+  .article-item-author,
+  .pagination .pagination-link.active {
     color: white;
   }
 }
@@ -72,6 +81,10 @@ body[theme=dark] {
   .badge,
   .separator {
     background: $gray100Dark;
+  }
+
+  .navigation .separator {
+    background: $bgHoverDark;
   }
 
   .article-item .article-item-thumbnail {
@@ -96,6 +109,10 @@ body[theme=dark] {
     .search-input::placeholder {
       color: $placeholderDark;
     }
+  }
+
+  .pagination .pagination-link.disable {
+    color: $placeholderDark;
   }
 
   .search-container .search-button::before,
@@ -127,7 +144,8 @@ body[theme=dark] {
     background: $bgDark;
   }
 
-  .article-item-author {
+  .article-item-author,
+  .pagination .pagination-link.active {
     color: black;
   }
 }
