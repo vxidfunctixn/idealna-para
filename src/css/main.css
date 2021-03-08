@@ -717,6 +717,8 @@ body[theme=dark] .pagination .pagination-link.active {
 .article-item .article-item-main .article-item-time span:nth-child(2) {
   font-size: 1.6rem;
   line-height: 1.6rem;
+  margin-top: 3px;
+  margin-bottom: 4px;
 }
 .article-item .article-item-main .article-item-time span:nth-child(3) {
   font-weight: 700;
