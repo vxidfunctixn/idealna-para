@@ -83,6 +83,29 @@ body[theme=light] {
   .pagination .pagination-link.active {
     color: white;
   }
+
+  .article-format blockquote {
+    background: $gray100Light;
+    border-left: 4px solid $gray300Light;
+
+    &::before {
+      color: $gray200Light;
+    }
+  }
+
+  .article-format ul ul ul li::marker,
+  .article-format ol ol ol li::marker {
+    color: $fontLight;
+  }
+
+  .article-format table td {
+    border-bottom: 1px solid $gray100Light;
+  }
+
+  .article-format pre,
+  .info {
+    background: $gray100Light;
+  }
 }
 
 body[theme=dark] {
@@ -168,5 +191,28 @@ body[theme=dark] {
   .article-item-author,
   .pagination .pagination-link.active {
     color: black;
+  }
+
+  .article-format blockquote {
+    background: $gray100Dark;
+    border-left: 4px solid $gray300Dark;
+
+    &::before {
+      color: $gray200Dark;
+    }
+  }
+
+  .article-format ul ul ul li::marker,
+  .article-format ol ol ol li::marker {
+    color: $fontDark;
+  }
+
+  .article-format table td {
+    border-bottom: 1px solid $gray100Dark;
+  }
+
+  .article-format pre,
+  .info {
+    background: $gray100Dark;
   }
 }

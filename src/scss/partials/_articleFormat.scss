@@ -1,0 +1,213 @@
+.article-format {
+  padding: $mdSpace;
+  padding-bottom: 1px;
+  margin-bottom: -1px;
+  line-height: 1.5em;
+
+  p {
+    margin-bottom: $mdSpace;
+    margin-top: 0;
+    text-align: justify;
+  }
+
+  a {
+    color: $accentColor;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: $mdSpace;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: $xlFont;
+    font-weight: $regularFont;
+  }
+
+  h2 {
+    font-size: $lgFont;
+    font-weight: $boldFont;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: $lgFont;
+    font-weight: $regularFont;
+    text-transform: uppercase;
+    color: $accentColor;
+  }
+
+  h4 {
+    font-size: $lgFont;
+    font-weight: $regularFont;
+  }
+
+  h5 {
+    font-size: $smFont;
+    font-weight: $boldFont;
+    text-transform: uppercase;
+  }
+
+  h6 {
+    font-size: $smFont;
+    font-weight: $regularFont;
+    text-transform: uppercase;
+    color: $accentColor;
+  }
+
+  blockquote {
+    margin: 0;
+    text-align: left;
+    padding: $mdSpace;
+    font-size: $smFont;
+    line-height: 1.5em;
+    position: relative;
+    z-index: 1;
+    border-top-right-radius: $smRadius;
+    border-bottom-right-radius: $smRadius;
+    margin-bottom: $mdSpace;
+
+    &::before {
+      content: "\efce";
+      font-family: IcoFont!important;
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      line-height: 1;
+      -webkit-font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      font-size: 64px;
+      z-index: -1;
+    }
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: $mdSpace;
+    padding-left: 46px;
+    font-size: $smFont;
+    text-align: left;
+  }
+
+  ul {
+    list-style-type: disc;
+
+    li::marker {
+      color: $accentColor;
+      font-size: 2.1rem;
+      line-height: 0.5em;
+    }
+
+    ul {
+      list-style-type: circle;
+
+      ul {
+        list-style-type: disc;
+
+        li::marker {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    li::marker {
+      color: $accentColor;
+      font-weight: $boldFont;
+    }
+
+    ol {
+      list-style-type: lower-latin;
+
+      ol {
+        list-style-type: upper-roman;
+      }
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    border-radius: $smRadius;
+    margin-bottom: $mdSpace;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    margin-bottom: $mdSpace;
+
+    table {
+      margin-bottom: 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: $smFont;
+    margin-bottom: $mdSpace;
+
+    th {
+      border-bottom: 2px solid $accentColor;
+      padding: $xsSpace $mdSpace;
+      text-align: left;
+      font-weight: $boldFont;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: $xsSpace $mdSpace;
+    }
+
+    tbody tr {
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        color: $accentColor;
+      }
+
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  pre {
+    display: block;
+    font-size: $smFont;
+    padding: $mdSpace;
+    border-radius: $smRadius;
+    margin-top: 0;
+    margin-bottom: $mdSpace;
+    line-height: 1.35em;
+    overflow-x: auto;
+  }
+
+  hr {
+    margin-top: 0;
+    margin-bottom: $mdSpace;
+    display: block;
+    height: 2px;
+    background: $accentColor;
+    border: none;
+    border-radius: 1px;
+    width: 150px;
+  }
+}
