@@ -4,6 +4,7 @@ const searchInputEl = document.getElementById('search-input')
 const searchSubmitEl = document.getElementById('search-submit')
 const invertColorsLabelEl = document.getElementById('invert-colors-label')
 const invertColorsIconEl = document.getElementById('invert-colors-icon')
+const disqusThread = document.getElementById('disqus_thread')
 
 const toggleNav = () => {
   bodyEl.classList.toggle('expand-nav')
@@ -26,8 +27,13 @@ const closeSearch = (e) => {
   searchFormEl.classList.remove('show')
 }
 
-const invertColors = () => {
-  const theme = bodyEl.getAttribute('theme')
+const invertColors = (toTheme = null) => {
+  let fromTheme = null
+  if (toTheme) {
+    fromTheme = toTheme === 'light' ? 'dark' : 'light'
+  }
+
+  const theme = fromTheme || bodyEl.getAttribute('theme')
   if (theme === 'light') {
     bodyEl.setAttribute('theme', 'dark')
     invertColorsLabelEl.innerText = 'Tryb jasny'
@@ -38,5 +44,9 @@ const invertColors = () => {
     invertColorsLabelEl.innerText = 'Tryb ciemny'
     invertColorsIconEl.classList.remove('icofont-sun')
     invertColorsIconEl.classList.add('icofont-night')
+  }
+
+  if (disqusThread) {
+    DISQUS.reset({ reload: true })
   }
 }

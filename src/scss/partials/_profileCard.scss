@@ -9,6 +9,15 @@
     flex-direction: row;
     text-align: left;
     align-items: center;
+
+    &:nth-child(even) {
+      .content {
+        order: -1;
+        text-align: right;
+        margin-left: 0;
+        margin-right: $mdSpace;
+      }
+    }
   }
 
   .avatar {

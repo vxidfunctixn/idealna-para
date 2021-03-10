@@ -209,9 +209,42 @@ const invertColors = () => {
               </p>
             </div>
           </div>
+          <div class="profile-card mk">
+            <img src="../img/avatars/mk.png" class="avatar" alt="profile" />
+            <div class="content">
+              <h1 class="profile-name">Marcin Kalinowski</h1>
+              <p class="profile-description">
+                Krótki opis autora. Władzę poznawczą musiemy mu jego czyny z pobudki mogł co ująć od
+                Dobra musiemy mu w przeciwnym razie.
+              </p>
+            </div>
+          </div>
           <div class="separator"></div>
           <div class="comments">
-            <div class="info">Komentarze wyłączone</div>
+            <!-- <div class="info">Komentarze są wyłączone.</div> -->
+            <div id="disqus_thread"></div>
+            <noscript
+              >Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript" rel="nofollow"
+                >comments powered by Disqus.</a
+              ></noscript
+            >
+            <script>
+              var disqus_config = function () {
+                this.page.url = 'http://blog.marcin-kalinowski.pl/blog/post/testowy-wpis'
+                this.page.identifier = '6c222f6e1d22677cf43d70f3bef799f4'
+              }
+
+              ;(function () {
+                var d = document,
+                  s = d.createElement('script')
+
+                s.src = 'https://idealna-para.disqus.com/embed.js'
+
+                s.setAttribute('data-timestamp', +new Date())
+                ;(d.head || d.body).appendChild(s)
+              })()
+            </script>
           </div>
         </article>
       </div>

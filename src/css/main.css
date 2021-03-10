@@ -936,9 +936,6 @@ body[theme=dark] .info {
   margin: 0;
   padding: 0 24px 24px 24px;
 }
-.article .comments {
-  padding: 24px;
-}
 
 .article-format {
   padding: 24px;
@@ -1134,12 +1131,24 @@ body[theme=dark] .info {
     text-align: left;
     align-items: center;
   }
+  .profile-card:nth-child(even) .content {
+    order: -1;
+    text-align: right;
+    margin-left: 0;
+    margin-right: 24px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   .profile-card {
     flex-direction: row;
     text-align: left;
     align-items: center;
+  }
+  .profile-card:nth-child(even) .content {
+    order: -1;
+    text-align: right;
+    margin-left: 0;
+    margin-right: 24px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1499px) {
@@ -1148,12 +1157,24 @@ body[theme=dark] .info {
     text-align: left;
     align-items: center;
   }
+  .profile-card:nth-child(even) .content {
+    order: -1;
+    text-align: right;
+    margin-left: 0;
+    margin-right: 24px;
+  }
 }
 @media (min-width: 1500px) {
   .profile-card {
     flex-direction: row;
     text-align: left;
     align-items: center;
+  }
+  .profile-card:nth-child(even) .content {
+    order: -1;
+    text-align: right;
+    margin-left: 0;
+    margin-right: 24px;
   }
 }
 .profile-card .avatar {
@@ -1218,6 +1239,14 @@ body[theme=dark] .info {
 }
 .profile-card.vm .profile-name {
   color: #5cd9ff;
+}
+
+.comments {
+  padding: 24px;
+}
+
+#disqus_thread a {
+  color: #ff5789;
 }
 
 .sidebar {
