@@ -11,6 +11,8 @@
 @import 'partials/sidebar';
 @import 'partials/pagination';
 @import 'partials/gallery';
+@import 'partials/page';
+@import 'partials/subjectCard';
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -103,15 +105,33 @@ body {
 }
 
 .main-wrapper {
-  min-height: calc(100vh - 300px - 40px - 147px);
+  min-height: calc(100vh - 300px - 142px);
   display: flex;
   flex-direction: column;
-
 
   @include screen('lg', 'xxl') {
     flex-direction: row;
     align-items: flex-start;
   }
+}
+
+.grid-wrapper {
+  min-height: calc(100vh - 300px - 142px);
+  max-width: 2360px;
+  display: grid;
+  grid-gap: $lgSpace;
+  grid-auto-rows: min-content;
+  padding-bottom: $lgSpace;
+
+  @include screen('md', 'lg') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include screen('xl', 'xxl') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  align-items: start;
 }
 
 .panel {

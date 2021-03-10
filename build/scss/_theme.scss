@@ -1,10 +1,24 @@
 body[theme=light] {
   color: $fontLight;
   background: $bodyLight;
+  scrollbar-color: light;
+
+  &::-webkit-scrollbar-track {
+    background: $bgLight;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $accentColor;
+    border: 2px solid $bgLight;
+  }
 
   .badge,
   .separator {
     background: $gray100Light;
+  }
+
+  .navigation .separator {
+    background: $bgHoverLight;
   }
 
   .article-item .article-item-thumbnail {
@@ -33,6 +47,7 @@ body[theme=light] {
 
   .pagination .pagination-link.disable {
     color: $placeholderLight;
+    opacity: 0.7;
   }
 
   .search-container .search-button::before,
@@ -42,7 +57,8 @@ body[theme=light] {
   .sidebar-nav .sidebar-link::before,
   .article-item .article-item-more::before,
   .pagination .pagination-arrow::before,
-  .pagination .pagination-link::before {
+  .pagination .pagination-link::before,
+  .subject-card .subject-list-link::before {
     background: $bgHoverLight;
   }
 
@@ -51,7 +67,8 @@ body[theme=light] {
   }
 
   .page-header .container h1,
-  .article-item .article-item-time {
+  .article-item .article-item-time,
+  .subject-card .subject-title {
     background: $bgTransparentLight;
   }
 
@@ -68,15 +85,60 @@ body[theme=light] {
   .pagination .pagination-link.active {
     color: white;
   }
+
+  .article-format blockquote {
+    background: $gray100Light;
+    border-left: 4px solid $gray300Light;
+
+    &::before {
+      color: $gray200Light;
+    }
+  }
+
+  .article-format ul ul ul li::marker,
+  .article-format ol ol ol li::marker {
+    color: $fontLight;
+  }
+
+  .article-format table td {
+    border-bottom: 1px solid $gray100Light;
+  }
+
+  .article-format pre,
+  .info {
+    background: $gray100Light;
+  }
+
+  .gallery .gallery-link {
+    color: black;
+  }
+
+  .subject-card .subject-list-link {
+    border-bottom: 1px solid $gray100Light;
+  }
 }
 
 body[theme=dark] {
   color: $fontDark;
   background: $bodyDark;
+  scrollbar-color: dark;
+
+  &::-webkit-scrollbar-track {
+    background: $bgDark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $bgDark;
+    border: 2px solid $accentColor;
+  }
 
   .badge,
   .separator {
     background: $gray100Dark;
+  }
+
+  .navigation .separator {
+    background: $bgHoverDark;
   }
 
   .article-item .article-item-thumbnail {
@@ -114,7 +176,8 @@ body[theme=dark] {
   .sidebar-nav .sidebar-link::before,
   .article-item .article-item-more::before,
   .pagination .pagination-arrow::before,
-  .pagination .pagination-link::before {
+  .pagination .pagination-link::before,
+  .subject-card .subject-list-link::before {
     background: $bgHoverDark;
   }
 
@@ -123,7 +186,8 @@ body[theme=dark] {
   }
 
   .page-header .container h1,
-  .article-item .article-item-time {
+  .article-item .article-item-time,
+  .subject-card .subject-title {
     background: $bgTransparentDark;
   }
 
@@ -139,5 +203,36 @@ body[theme=dark] {
   .article-item-author,
   .pagination .pagination-link.active {
     color: black;
+  }
+
+  .article-format blockquote {
+    background: $gray100Dark;
+    border-left: 4px solid $gray300Dark;
+
+    &::before {
+      color: $gray200Dark;
+    }
+  }
+
+  .article-format ul ul ul li::marker,
+  .article-format ol ol ol li::marker {
+    color: $fontDark;
+  }
+
+  .article-format table td {
+    border-bottom: 1px solid $gray100Dark;
+  }
+
+  .article-format pre,
+  .info {
+    background: $gray100Dark;
+  }
+
+  .gallery .gallery-link {
+    color: white;
+  }
+
+  .subject-card .subject-list-link {
+    border-bottom: 1px solid $gray100Dark;
   }
 }

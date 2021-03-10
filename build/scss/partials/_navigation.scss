@@ -70,6 +70,10 @@ body.expand-nav {
     width: auto;
     height: auto;
     background: transparent;
+
+    .separator {
+      display: none;
+    }
   }
 }
 
@@ -145,7 +149,8 @@ body.expand-nav {
       width: 54px;
       height: 54px;
       flex-shrink: 0;
-      border-radius: $smRadius;
+      border-top-right-radius: $smRadius;
+      border-bottom-right-radius: $smRadius;
       border: none;
       background: transparent;
       color: inherit;

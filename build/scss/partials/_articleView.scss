@@ -1,0 +1,31 @@
+.article {
+  margin-bottom: $lgSpace;
+
+  .article-details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $mdSpace;
+    align-items: center;
+  }
+
+  .article-time {
+    font-size: $xsFont;
+    margin: 4px 8px 4px 0px;
+
+    i {
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  .badge.link {
+    margin: 4px 8px 4px 0px;
+  }
+
+  .article-title {
+    font-size: $xlFont;
+    font-weight: $regularFont;
+    margin: 0;
+    padding: 0 $mdSpace $mdSpace $mdSpace;
+  }
+}

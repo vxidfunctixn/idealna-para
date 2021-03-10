@@ -56,6 +56,8 @@
       span:nth-child(2) {
         font-size: $xsFont;
         line-height: $xsFont;
+        margin-top: 3px;
+        margin-bottom: 4px;
       }
 
       span:nth-child(3) {
@@ -91,7 +93,7 @@
       grid-template-areas:
                       "sepa sepa sepa"
                       "auth tags more";
-      grid-template-columns: 68px 1fr auto;
+      grid-template-columns: 64px 1fr auto;
     }
 
     .separator {
@@ -128,7 +130,7 @@
       outline: none;
 
       @include screen("lg", "xxl") {
-        margin-left: 6px;
+        margin-left: 16px;
       }
 
       &:focus {
@@ -150,7 +152,7 @@
 
     .link {
       flex-shrink: 0;
-      margin: 4px $xsSpace 4px 0px;
+      margin: 4px 8px 4px 0px;
       height: 24px;
     }
 
