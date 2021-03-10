@@ -106,6 +106,10 @@ body[theme=light] {
   .info {
     background: $gray100Light;
   }
+
+  .gallery .gallery-link {
+    color: black;
+  }
 }
 
 body[theme=dark] {
@@ -214,5 +218,9 @@ body[theme=dark] {
   .article-format pre,
   .info {
     background: $gray100Dark;
+  }
+
+  .gallery .gallery-link {
+    color: white;
   }
 }

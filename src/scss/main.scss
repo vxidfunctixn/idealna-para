@@ -10,6 +10,7 @@
 @import 'partials/comments';
 @import 'partials/sidebar';
 @import 'partials/pagination';
+@import 'partials/gallery';
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -80,15 +81,15 @@ body {
   height: 1px;
 }
 
-.sm-icon {
+.sm-icofont {
   font-size: $smIcon;
 }
 
-.md-icon {
+.md-icofont {
   font-size: $mdIcon;
 }
 
-.lg-icon {
+.lg-icofont {
   font-size: $lgIcon;
 }
 

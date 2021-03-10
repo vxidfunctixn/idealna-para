@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../icofont/icofont.min.css" />
+    <link rel="stylesheet" href="../libs/icofont/icofont.min.css" />
   </head>
 
   <body theme="dark">
@@ -33,7 +33,7 @@
               />
               <div class="search-focus-mark"></div>
               <button type="submit" class="search-button" id="search-submit">
-                <i class="icofont-search md-icon"></i>
+                <i class="icofont-search md-icofont"></i>
               </button>
             </div>
           </form>
@@ -55,10 +55,10 @@
           <div class="separator"></div>
           <button class="nav-button" id="invert-colors" onClick="invertColors()">
             <span class="label" id="invert-colors-label">Tryb jasny</span>
-            <i class="icofont-sun lg-icon" id="invert-colors-icon"></i>
+            <i class="icofont-sun lg-icofont" id="invert-colors-icon"></i>
           </button>
           <button class="nav-button" id="show-search" onClick="showSearch()">
-            <i class="icofont-search lg-icon"></i>
+            <i class="icofont-search lg-icofont"></i>
           </button>
         </div>
 
@@ -82,7 +82,7 @@
           <header>
             <div class="article-details">
               <time class="article-time">
-                <i class="icofont-calendar sm-icon"></i>
+                <i class="icofont-calendar sm-icofont"></i>
                 21 Października 2021
               </time>
               <a href="#" class="badge link">#temat</a>
@@ -197,6 +197,58 @@ const invertColors = () => {
   }
 }</pre
             >
+            <h2>Galeria</h2>
+            <div class="gallery">
+              <a data-fslightbox="gallery" href="../img/sample/1.png" class="gallery-link">
+                <img src="../img/sample/1.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/2.png" class="gallery-link">
+                <img src="../img/sample/2.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/3.png" class="gallery-link">
+                <img src="../img/sample/3.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/4.png" class="gallery-link">
+                <img src="../img/sample/4.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/5.png" class="gallery-link">
+                <img src="../img/sample/5.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/6.png" class="gallery-link">
+                <img src="../img/sample/6.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/7.png" class="gallery-link">
+                <img src="../img/sample/7.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/8.png" class="gallery-link">
+                <img src="../img/sample/8.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery" href="../img/sample/9.png" class="gallery-link">
+                <img src="../img/sample/9.png" alt="" class="gallery-image" />
+              </a>
+            </div>
+
+            <h2>Inna galeria</h2>
+            <div class="gallery">
+              <a data-fslightbox="gallery2" href="../img/sample/3.png" class="gallery-link">
+                <img src="../img/sample/3.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery2" href="../img/sample/5.png" class="gallery-link">
+                <img src="../img/sample/5.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery2" href="../img/sample/9.png" class="gallery-link">
+                <img src="../img/sample/9.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery2" href="../img/sample/10.png" class="gallery-link">
+                <img src="../img/sample/10.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery2" href="../img/sample/11.png" class="gallery-link">
+                <img src="../img/sample/11.png" alt="" class="gallery-image" />
+              </a>
+              <a data-fslightbox="gallery2" href="../img/sample/12.png" class="gallery-link">
+                <img src="../img/sample/12.png" alt="" class="gallery-image" />
+              </a>
+            </div>
           </div>
           <div class="separator"></div>
           <div class="profile-card vm">
@@ -258,22 +310,22 @@ const invertColors = () => {
           <ul class="social-nav">
             <li class="social-item">
               <a href="#" class="social-link">
-                <i class="icofont-facebook lg-icon"></i>
+                <i class="icofont-facebook lg-icofont"></i>
               </a>
             </li>
             <li class="social-item">
               <a href="#" class="social-link">
-                <i class="icofont-instagram lg-icon"></i>
+                <i class="icofont-instagram lg-icofont"></i>
               </a>
             </li>
             <li class="social-item">
               <a href="#" class="social-link">
-                <i class="icofont-twitter lg-icon"></i>
+                <i class="icofont-twitter lg-icofont"></i>
               </a>
             </li>
             <li class="social-item">
               <a href="#" class="social-link">
-                <i class="icofont-youtube-play lg-icon"></i>
+                <i class="icofont-youtube-play lg-icofont"></i>
               </a>
             </li>
           </ul>
@@ -349,7 +401,14 @@ const invertColors = () => {
         Copyright 2021 © by Company Name. All rights reserved. Powered by Batflat.
       </div>
     </footer>
-
     <script src="../js/main.js"></script>
+    <script>
+      var galleries = document.querySelectorAll('.gallery')
+      if (galleries.length) {
+        var fslightbox = document.createElement('script')
+        fslightbox.src = '../js/fslightbox.js'
+        document.getElementsByTagName('body')[0].appendChild(fslightbox)
+      }
+    </script>
   </body>
 </html>

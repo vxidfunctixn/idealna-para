@@ -83,9 +83,9 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: 'src/icofont/',
+            cwd: 'src/libs/',
             src: '**/*',
-            dest: 'build/icofont/',
+            dest: 'build/libs/',
           },
         ],
       },
