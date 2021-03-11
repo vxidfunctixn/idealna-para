@@ -44,7 +44,7 @@
       transition: opacity $quickTransition;
     }
 
-    &:hover {
+    &:hover, &:focus {
       opacity: 1;
 
       .gallery-image {

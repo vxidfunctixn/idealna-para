@@ -39,7 +39,12 @@ body.expand-nav {
 
 .nav-logo-container {
   flex-shrink: 1;
-  padding: $mdSpace;
+  padding: 0 $mdSpace;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  @include focusBorder();
+  @include hoverBefore();
 
   .nav-logo {
     display: block;
@@ -154,31 +159,13 @@ body.expand-nav {
       border: none;
       background: transparent;
       color: inherit;
-      position: relative;
       padding: 0;
-      z-index: 1;
       cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;
-      outline: none;
-
-      &:focus {
-        box-shadow: inset 0 0 0 1px $accentColor;
-      }
-
-      &::before {
-        content: '';
-        @include fillAbsolute();
-        z-index: -1;
-        will-change: transform;
-        opacity: 0;
-        transition: opacity $quickTransition;
-      }
-
-      &:hover::before {
-        opacity: 1;
-      }
+      @include focusBorder();
+      @include hoverBefore();
     }
   }
 }
@@ -208,13 +195,8 @@ body.expand-nav {
       padding: $mdSpace;
       height: 80px;
       line-height: 32px;
-      position: relative;
-      z-index: 1;
-      outline: none;
-
-      &:focus {
-        box-shadow: inset 0 0 0 1px $accentColor;
-      }
+      @include focusBorder();
+      @include hoverBefore();
 
       &.active::after {
         content: '';
@@ -235,19 +217,6 @@ body.expand-nav {
           height: 10px;
         }
       }
-
-      &::before {
-        content: '';
-        @include fillAbsolute();
-        z-index: -1;
-        will-change: transform;
-        opacity: 0;
-        transition: opacity $quickTransition;
-      }
-
-      &:hover::before {
-        opacity: 1;
-      }
     }
   }
 }
@@ -260,20 +229,15 @@ body.expand-nav {
   border: none;
   background: transparent;
   cursor: pointer;
-  position: relative;
   padding: 0;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: $mdSpace;
   font-family: inherit;
   font-size: $mdFont;
-  outline: none;
-
-  &:focus {
-    box-shadow: inset 0 0 0 1px $accentColor;
-  }
+  @include focusBorder();
+  @include hoverBefore();
 
   .label {
     line-height: 32px;
@@ -283,17 +247,9 @@ body.expand-nav {
     }
   }
 
-  &::before {
-    content: '';
-    @include fillAbsolute();
-    z-index: -1;
-    will-change: transform;
-    opacity: 0;
-    transition: opacity $quickTransition;
-  }
-
-  &:hover::before {
-    opacity: 1;
+  .icofont-search {
+    width: 32px;
+    font-size: 28px;
   }
 }
 

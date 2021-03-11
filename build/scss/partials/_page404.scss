@@ -1,0 +1,19 @@
+.header-404 {
+  text-align: center;
+  font-size: 35vw;
+  line-height: 225px;
+
+  @include screen('md', 'xxl') {
+    font-size: 225px;
+  }
+  margin: 0;
+}
+
+.content-404 {
+  text-align: center;
+  margin-bottom: $lgSpace;
+
+  p {
+    margin: $mdSpace 0;
+  }
+}

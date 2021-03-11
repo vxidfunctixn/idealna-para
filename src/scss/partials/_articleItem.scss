@@ -7,11 +7,7 @@
     display: block;
     text-decoration: none;
     color: inherit;
-    outline: none;
-
-    &:focus {
-      box-shadow: inset 0 0 0 1px $accentColor;
-    }
+    @include focusBorder();
 
     .article-item-thumbnail {
       display: block;
@@ -127,14 +123,10 @@
       border-radius: 50%;
       text-align: center;
       text-decoration: none;
-      outline: none;
+      @include focusBorder();
 
       @include screen("lg", "xxl") {
         margin-left: 16px;
-      }
-
-      &:focus {
-        box-shadow: inset 0 0 0 1px $accentColor;
       }
 
       &:hover {
@@ -167,28 +159,11 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      outline: none;
       border-bottom-right-radius: $lgRadius;
-      position: relative;
-      z-index: 1;
       margin-left: auto;
-
-      &:focus {
-        box-shadow: inset 0 0 0 1px $accentColor;
-      }
-
-      &::before {
-        content: '';
-        @include fillAbsolute();
-        z-index: -1;
-        will-change: transform;
-        opacity: 0;
-        transition: opacity $quickTransition;
+      @include focusBorder();
+      @include hoverBefore() {
         border-bottom-right-radius: $lgRadius;
-      }
-
-      &:hover::before {
-        opacity: 1;
       }
     }
   }

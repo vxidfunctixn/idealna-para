@@ -11,6 +11,11 @@
     padding: $smSpace;
     min-height: 140px;
     text-decoration: none;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 0 1px $accentColor;
+    }
 
     .subject-thumbnail {
       display: block;
@@ -57,21 +62,8 @@
         padding: $smSpace $mdSpace;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-        z-index: 1;
-
-        &::before {
-          content: '';
-          @include fillAbsolute();
-          z-index: -1;
-          will-change: transform;
-          opacity: 0;
-          transition: opacity $quickTransition;
-        }
-
-        &:hover::before {
-          opacity: 1;
-        }
+        @include focusBorder();
+        @include hoverBefore();
 
         .badge {
           position: relative;
@@ -84,8 +76,12 @@
         }
       }
 
-      &:last-child .subject-list-link {
-        border-bottom: none;
+      &:last-child {
+        .subject-list-link {
+          border-bottom-left-radius: $lgRadius;
+          border-bottom-right-radius: $lgRadius;
+          border-bottom: none;
+        }
       }
     }
   }

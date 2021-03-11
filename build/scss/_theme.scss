@@ -3,7 +3,8 @@ body[theme=light] {
   background: $bodyLight;
   scrollbar-color: light;
 
-  &::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track,
+  .main-footer {
     background: $bgLight;
   }
 
@@ -13,12 +14,10 @@ body[theme=light] {
   }
 
   .badge,
-  .separator {
+  .separator,
+  .article-format pre,
+  .info {
     background: $gray100Light;
-  }
-
-  .navigation .separator {
-    background: $bgHoverLight;
   }
 
   .article-item .article-item-thumbnail {
@@ -50,6 +49,8 @@ body[theme=light] {
     opacity: 0.7;
   }
 
+  .navigation .separator,
+  .nav-logo-container::before,
   .search-container .search-button::before,
   .nav-list .nav-link::before,
   .nav-button::before,
@@ -58,7 +59,8 @@ body[theme=light] {
   .article-item .article-item-more::before,
   .pagination .pagination-arrow::before,
   .pagination .pagination-link::before,
-  .subject-card .subject-list-link::before {
+  .subject-card .subject-list-link::before,
+  .link-button::before {
     background: $bgHoverLight;
   }
 
@@ -75,10 +77,6 @@ body[theme=light] {
   .panel {
     background: $bgLight;
     box-shadow: $areaShadowLight;
-  }
-
-  .main-footer {
-    background: $bgLight;
   }
 
   .article-item-author,
@@ -100,21 +98,18 @@ body[theme=light] {
     color: $fontLight;
   }
 
-  .article-format table td {
-    border-bottom: 1px solid $gray100Light;
-  }
-
-  .article-format pre,
-  .info {
-    background: $gray100Light;
-  }
-
   .gallery .gallery-link {
     color: black;
   }
 
+  .article-format table td,
   .subject-card .subject-list-link {
     border-bottom: 1px solid $gray100Light;
+  }
+
+  .header-404 {
+    color: $bgLight;
+    text-shadow: $textShadowLight;
   }
 }
 
@@ -123,7 +118,8 @@ body[theme=dark] {
   background: $bodyDark;
   scrollbar-color: dark;
 
-  &::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track,
+  .main-footer {
     background: $bgDark;
   }
 
@@ -132,13 +128,11 @@ body[theme=dark] {
     border: 2px solid $accentColor;
   }
 
+  .article-format pre,
+  .info,
   .badge,
   .separator {
     background: $gray100Dark;
-  }
-
-  .navigation .separator {
-    background: $bgHoverDark;
   }
 
   .article-item .article-item-thumbnail {
@@ -169,6 +163,8 @@ body[theme=dark] {
     color: $placeholderDark;
   }
 
+  .navigation .separator,
+  .nav-logo-container::before,
   .search-container .search-button::before,
   .nav-list .nav-link::before,
   .nav-button::before,
@@ -177,7 +173,8 @@ body[theme=dark] {
   .article-item .article-item-more::before,
   .pagination .pagination-arrow::before,
   .pagination .pagination-link::before,
-  .subject-card .subject-list-link::before {
+  .subject-card .subject-list-link::before,
+  .link-button::before {
     background: $bgHoverDark;
   }
 
@@ -194,10 +191,6 @@ body[theme=dark] {
   .panel {
     background: $bgDark;
     box-shadow: $areaShadowDark;
-  }
-
-  .main-footer {
-    background: $bgDark;
   }
 
   .article-item-author,
@@ -219,20 +212,17 @@ body[theme=dark] {
     color: $fontDark;
   }
 
-  .article-format table td {
-    border-bottom: 1px solid $gray100Dark;
-  }
-
-  .article-format pre,
-  .info {
-    background: $gray100Dark;
-  }
-
   .gallery .gallery-link {
     color: white;
   }
 
+  .article-format table td,
   .subject-card .subject-list-link {
     border-bottom: 1px solid $gray100Dark;
+  }
+
+  .header-404 {
+    color: $bgDark;
+    text-shadow: $textShadowDark;
   }
 }
