@@ -58,7 +58,8 @@ body[theme=light] {
   .article-item .article-item-more::before,
   .pagination .pagination-arrow::before,
   .pagination .pagination-link::before,
-  .subject-card .subject-list-link::before {
+  .subject-card .subject-list-link::before,
+  .link-button::before {
     background: $bgHoverLight;
   }
 
@@ -115,6 +116,11 @@ body[theme=light] {
 
   .subject-card .subject-list-link {
     border-bottom: 1px solid $gray100Light;
+  }
+
+  .header-404 {
+    color: $bgLight;
+    text-shadow: $textShadowLight;
   }
 }
 
@@ -177,7 +183,8 @@ body[theme=dark] {
   .article-item .article-item-more::before,
   .pagination .pagination-arrow::before,
   .pagination .pagination-link::before,
-  .subject-card .subject-list-link::before {
+  .subject-card .subject-list-link::before,
+  .link-button::before {
     background: $bgHoverDark;
   }
 
@@ -234,5 +241,10 @@ body[theme=dark] {
 
   .subject-card .subject-list-link {
     border-bottom: 1px solid $gray100Dark;
+  }
+
+  .header-404 {
+    color: $bgDark;
+    text-shadow: $textShadowDark;
   }
 }
