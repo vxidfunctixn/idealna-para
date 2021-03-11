@@ -27,6 +27,17 @@ const closeSearch = (e) => {
   searchFormEl.classList.remove('show')
 }
 
+const setCookie = (name, val) => {
+  if (navigator.cookieEnabled) {
+    const cookieName = encodeURIComponent(name)
+    const cookieVal = encodeURIComponent(val)
+    let cookieText = `${cookieName} = ${cookieVal}`
+    document.cookie = cookieText
+  } else {
+    alert('Aby korzystać z wszystkich funkcji strony, należy włączyć obsługę ciasteczek.')
+  }
+}
+
 const invertColors = (toTheme = null) => {
   let fromTheme = null
   if (toTheme) {
@@ -39,11 +50,13 @@ const invertColors = (toTheme = null) => {
     invertColorsLabelEl.innerText = 'Tryb jasny'
     invertColorsIconEl.classList.remove('icofont-night')
     invertColorsIconEl.classList.add('icofont-sun')
+    setCookie('theme', 'dark')
   } else {
     bodyEl.setAttribute('theme', 'light')
     invertColorsLabelEl.innerText = 'Tryb ciemny'
     invertColorsIconEl.classList.remove('icofont-sun')
     invertColorsIconEl.classList.add('icofont-night')
+    setCookie('theme', 'light')
   }
 
   if (disqusThread) {
