@@ -2,11 +2,18 @@
   margin-bottom: $lgSpace;
 
   .article-format {
-    padding: $lgSpace $mdSpace;
-    padding-bottom: 1px;
-    max-width: 760px;
     margin: 0 auto;
     margin-bottom: -1px;
+
+    padding: $lgSpace $xsSpace 1px;
+
+    @include screen('sm', 'md') {
+      padding: $lgSpace $mdSpace 1px;
+    }
+
+    @include screen('lg', 'xxl') {
+      padding: $lgSpace $lgSpace 1px;
+    }
 
     img {
       margin: 0 auto;
@@ -47,6 +54,8 @@
     }
 
     .profile-card {
+      padding: $mdSpace 0;
+
       img {
         margin: 0;
       }
@@ -62,6 +71,12 @@
 
       a:hover {
         opacity: 1;
+      }
+    }
+
+    ol, ul {
+      ol, ul {
+        margin-bottom: 0;
       }
     }
   }

@@ -11,7 +11,8 @@
 
 .content-404 {
   text-align: center;
-  margin-bottom: $lgSpace;
+  max-width: calc(760px - #{$mdSpace} - #{$mdSpace});
+  margin: 0 auto $lgSpace auto;
 
   p {
     margin: $mdSpace 0;

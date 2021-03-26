@@ -1,5 +1,13 @@
 .comments {
-  padding: $mdSpace;
+  padding: $mdSpace $xsSpace;
+
+  @include screen('sm', 'md') {
+    padding: $mdSpace;
+  }
+
+  @include screen('lg', 'xxl') {
+    padding: $mdSpace $lgSpace;
+  }
 }
 
 #disqus_thread {

@@ -1,14 +1,16 @@
 .sidebar {
-  margin-bottom: $lgSpace;
   flex-shrink: 0;
   padding: $xsSpace 0;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto $lgSpace;
 
   @include screen('lg', 'xxl') {
     margin-left: $lgSpace;
     width: 300px;
   }
 
-  h1 {
+  h2 {
     font-size: $smFont;
     margin: 0;
     padding: $smSpace $mdSpace;
@@ -27,6 +29,7 @@
     padding: 0;
 
     .sidebar-link {
+      min-height: 48px;
       display: flex;
       padding: $xsSpace $mdSpace;
       color: inherit;

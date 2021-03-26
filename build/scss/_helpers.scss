@@ -86,3 +86,18 @@
     box-shadow: inset 0 0 0 1px $accentColor;
   }
 }
+
+@mixin iconBefore() {
+   font-family: IcoFont!important;
+   speak: none;
+   font-style: normal;
+   font-weight: 400;
+   font-variant: normal;
+   text-transform: none;
+   white-space: nowrap;
+   word-wrap: normal;
+   direction: ltr;
+   line-height: 1;
+   -webkit-font-feature-settings: "liga";
+   -webkit-font-smoothing: antialiased;
+}

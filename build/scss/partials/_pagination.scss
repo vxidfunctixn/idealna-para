@@ -17,6 +17,10 @@
     min-height: 54px;
     @include focusBorder();
     @include hoverBefore();
+
+    &:not(.active) {
+      border-radius: $lgRadius;
+    }
   }
 
   .pagination-item {
@@ -30,5 +34,6 @@
 
   .pagination-link.disable {
     pointer-events: none;
+    user-select: none;
   }
 }

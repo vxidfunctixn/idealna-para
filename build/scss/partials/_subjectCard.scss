@@ -27,6 +27,7 @@
         @include fillAbsolute();
         will-change: transform;
         transition: transform $longTransition;
+        object-fit: cover;
       }
     }
 
@@ -39,10 +40,14 @@
       z-index: 1;
       font-weight: $regularFont;
       font-size: $lgFont;
-      padding: $xsSpace $mdSpace;
+      padding: $xsSpace;
       border-radius: $lgRadius;
       margin: 0;
       display: inline-block;
+
+      @include screen('sm', 'xxl') {
+        padding: $smSpace $mdSpace;
+      }
     }
   }
 
@@ -59,11 +64,15 @@
         color: inherit;
         display: flex;
         font-size: $xsFont;
-        padding: $smSpace $mdSpace;
         justify-content: space-between;
         align-items: center;
         @include focusBorder();
         @include hoverBefore();
+        padding: $smSpace $xsSpace;
+
+        @include screen('sm', 'xxl') {
+          padding: $smSpace $mdSpace;
+        }
 
         .badge {
           position: relative;

@@ -1,4 +1,4 @@
-body[theme=light] {
+body.light {
   color: $fontLight;
   background: $bodyLight;
   scrollbar-color: light;
@@ -111,9 +111,13 @@ body[theme=light] {
     color: $bgLight;
     text-shadow: $textShadowLight;
   }
+
+  img:not(.show):not(.fslightbox-source) {
+    background: black;
+  }
 }
 
-body[theme=dark] {
+body.dark {
   color: $fontDark;
   background: $bodyDark;
   scrollbar-color: dark;
@@ -224,5 +228,9 @@ body[theme=dark] {
   .header-404 {
     color: $bgDark;
     text-shadow: $textShadowDark;
+  }
+
+  img:not(.show):not(.fslightbox-source) {
+    background: white;
   }
 }
